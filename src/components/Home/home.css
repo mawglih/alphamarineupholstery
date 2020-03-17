@@ -25,11 +25,11 @@
   width: 50vw;
 }
 .hero {
-  width: 80vw;
-  height: 50vw;
-  background: url("https://amu-images.s3.us-east-2.amazonaws.com/front/boat_1200.png"), no-repeat;
+  width: 100vw;
+  height: 40vw;
+  background: url("https://amu-images.s3.us-east-2.amazonaws.com/front/boat_1200.png") lightskyblue center no-repeat;
   align-self: center;
-  margin: 20px;
+  margin: 5px;
 }
 
 /* for smaller devices */

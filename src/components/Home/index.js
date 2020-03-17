@@ -1,5 +1,6 @@
 import React from 'react';
 import Map from '../Map';
+import Upholstery from '../Upholstery';
 import styles from './home.css';
 
 const index = () => (
@@ -20,6 +21,11 @@ const index = () => (
     <div className={styles.row}>
       <div className={styles.map}>
         <Map/>
+      </div>
+    </div>
+    <div className={styles.row}>
+      <div className={styles.map}>
+        <Upholstery />
       </div>
     </div>
   </div>
