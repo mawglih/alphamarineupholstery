@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t mawglih/alphamarineupholstery -f Dockerfile.dev .
+
+script:
+  - docker run mawglih/alphamarineupholstery npm run test -- --coverage
