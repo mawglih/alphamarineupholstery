@@ -26,6 +26,7 @@ const index = () => (
     <div className={styles.row}>
       <div className={styles.map}>
         <Upholstery />
+        <Upholstery />
       </div>
     </div>
   </div>
