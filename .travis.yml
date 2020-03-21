@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run mawglih/alphamarineupholstery npm run test -- --coverage
+
+  deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "alphmarineupholstery"
+    env: "Alphamarineupholstery-env"
+    bucket_name: "elasticbeanstalk-us-east-2-202717464391"
+    bucket_path: "alphmarineupholstery"
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: "$AWS_SECRET_KEY"
