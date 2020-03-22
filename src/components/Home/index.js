@@ -5,7 +5,7 @@ import styles from './home.css';
 
 const index = () => (
   <div className={styles.container}>
-    <h1 className={styles.header}>Alphamarineupholstery - your boat renovation shop</h1>
+    <h1 className={styles.header}>Alphamarineupholstery - your best boat renovation shop</h1>
     <div className={styles.hero}></div>
     <div className={styles.row}>
       <div className={styles.image}>
