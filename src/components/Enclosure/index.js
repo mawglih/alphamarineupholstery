@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import styles from './Enclosure.css';
+import AllPhotos from '../AllFotos';
 
-const index = () => (
-  <div>
-    Enclosure
-  </div>
-);
+const Enclosure = () => {
 
-export default index;
+  return(
+    <>
+      <AllPhotos
+        classname1={styles.list}
+        classname2={styles.listItem}
+      />
+    </>
+  );
+}
 
+export default Enclosure;

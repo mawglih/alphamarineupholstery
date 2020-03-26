@@ -18,8 +18,12 @@
       "sizes": "512x512"
     }	    
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
+  "scope":".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#383ADE",
+  "background_color": "#87cefa",
+  "description":"Marine Upholstery Shop in Northwen Florida",
+  "dir":"ltr",
+  "lang":"en-US"
 }

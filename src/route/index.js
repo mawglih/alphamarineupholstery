@@ -10,7 +10,7 @@ import Upholstery from '../components/Upholstery';
 const index = () => (
   <Switch>
     <Route exact path='/awnings' component={Awnings} />
-    <Route exact path='/enclosure' component={Enclosure} />
+    <Route exact path='/about' component={Enclosure} />
     <Route exact path='/products' component={Products} />
     <Route exact path='/upholstery' component={Upholstery} />
     <Route path='/products/:productId' component={ProductDetail} />

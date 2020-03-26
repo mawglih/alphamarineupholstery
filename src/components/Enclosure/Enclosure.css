@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-top: 5vh;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.listItem {
+  width: 10vw;
+  margin: 5px 10px;
+}
+.listItem > img {
+  width: 100%;
+  display: block;
+  padding: 2px;
+}
