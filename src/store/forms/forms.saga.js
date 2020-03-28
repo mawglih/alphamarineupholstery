@@ -6,8 +6,9 @@ import {
 import api from '../../api';
 import { SUBMIT_FORM_TO_SERVER_START, submitFormFailure, submitFormSuccess } from './forms.actions';
 
-export function* sendMessageSaga(payload) {
+function* sendMessageSaga(payload) {
  try {
+   console.log('saga paylosd: ', payload);
   const result = yield call(api.sendemail(payload));
   yield put(submitFormSuccess(result))
  } catch(err) {
@@ -16,4 +17,6 @@ export function* sendMessageSaga(payload) {
  }
 }
 
-export default takeLatest(SUBMIT_FORM_TO_SERVER_START, sendMessageSaga);
+export default [
+  takeLatest(SUBMIT_FORM_TO_SERVER_START, sendMessageSaga),
+];
