@@ -6,6 +6,7 @@ import Home from '../components/Home';
 import ProductDetail from '../components/Products/ProductDetail';
 import Products from '../components/Products/ProductsList';
 import Upholstery from '../components/Upholstery';
+import ContactUs from '../components/ContactUs';
 
 const index = () => (
   <Switch>
@@ -13,6 +14,7 @@ const index = () => (
     <Route exact path='/about' component={Enclosure} />
     <Route exact path='/products' component={Products} />
     <Route exact path='/upholstery' component={Upholstery} />
+    <Route exact path='/contact' component={ContactUs} />
     <Route path='/products/:productId' component={ProductDetail} />
     <Route exact path='/' component={Home} />
   </Switch>

@@ -20,13 +20,13 @@ const MyShop = ({ text }) => (
   </div>
 );
 
-const index = () => {
+const Map = ({ value, shop }) => {
   const defaultPosition = {
     center: {
       lat: 29.589014,
       lng: -81.202043,
     },
-    zoom: 17
+    zoom: value
   }
   return (
     <div className={styles.container}>
@@ -39,11 +39,11 @@ const index = () => {
       <MyShop 
           lat={29.589014} 
           lng={-81.202043} 
-          text={'Alpamarineupholstery'} 
+          text={shop} 
         />
         </GoogleMapReact>
     </div>
   )
 }
 
-export default index
+export default Map;

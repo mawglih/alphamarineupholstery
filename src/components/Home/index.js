@@ -28,7 +28,10 @@ const Home = () => {
         </div>
         <div className={styles.row}>
           <div className={styles.map}>
-            <Map/>
+            <Map
+              value={17}
+              shop="AlphaMarineUpholstery"
+            />
           </div>
         </div>
       </div>

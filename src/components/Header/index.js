@@ -85,10 +85,9 @@ const Header = () => {
           centered
         >
           {LINKS.map(({ text, link }) => (
-            <NavLink exact={true} activeClassName={styles.isActive} to={link}>
+            <NavLink exact={true} activeClassName={styles.isActive} to={link} key={text}>
               <Tab 
                 label={text}
-                textColor="white"
               />
             </NavLink>
           ))}
