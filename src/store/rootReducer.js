@@ -6,5 +6,5 @@ import forms from './forms/forms.reducer';
 export default combineReducers({
   // products,
   form: FormReducer,
-  // forms,
+  forms,
 });

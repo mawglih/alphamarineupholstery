@@ -2,7 +2,7 @@ export const SUBMIT_FORM_TO_SERVER_START = 'SUBMIT_FORM_TO_SERVER_START';
 export const SUBMIT_FORM_TO_SERVER_SUCCESS = 'SUBMIT_FORM_TO_SERVER_SUCCESS';
 export const SUBMIT_FORM_TO_SERVER_FAILURE = 'SUBMIT_FORM_TO_SERVER_FAILURE';
 
-export const submitFormStart = (payload) => {
+export const submitFormStart = payload => {
   console.log('action submit form paylod: ', payload);
   return{
     type: SUBMIT_FORM_TO_SERVER_START,
@@ -10,7 +10,7 @@ export const submitFormStart = (payload) => {
   };
 };
 
-export const submitFormSuccess = ({ payload }) => {
+export const submitFormSuccess = payload => {
   console.log('action success paylod: ', payload);
   return{
     type: SUBMIT_FORM_TO_SERVER_SUCCESS,
