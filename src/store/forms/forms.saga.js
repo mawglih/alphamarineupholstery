@@ -15,11 +15,15 @@ import { SUBMIT_FORM_TO_SERVER_START, submitFormFailure, submitFormSuccess } fro
 function* sendMessageSaga({payload}) {
  try {
   console.log('saga paylosd: ', payload);
-  const result = yield call(api.sendemail(payload));
-  yield console.log('server response', result)
-  yield put(submitFormSuccess(result))
+  const { data, status } = yield call(api.sendemail, payload);
+  if (status === 200) {
+    yield console.log('server response', data)
+    yield put(submitFormSuccess('Successs'))
+  } else {
+    put(submitFormFailure('Not good'))
+  }
  } catch(err) {
-   console.log('error in saga sendmessage', err);
+   console.log('error in saga sendmessage', err.message);
    yield put(submitFormFailure(err));
  }
 }

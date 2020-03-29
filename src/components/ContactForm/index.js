@@ -41,7 +41,7 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
-  const [values, setValues] = useState({ userName: '', userEmail: '', userText: '', })
+  const [values, setValues] = useState({ userName: '', userEmail: '', userText: '', userSubject: '', })
   return(
     <form
       onSubmit={submitForm} 
