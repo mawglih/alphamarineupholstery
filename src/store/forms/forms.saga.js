@@ -4,19 +4,19 @@ import {
   takeLatest,
 } from 'redux-saga/effects';
 import api from '../../api';
-import axios from 'axios';
 import { SUBMIT_FORM_TO_SERVER_START, submitFormFailure, submitFormSuccess } from './forms.actions';
 
 // const URL = 'http://web-server.oleg-dev.com:6565/send-email';
-const URL = 'http://localhost:8787/send-email';
-const emailsend = async (url, data) => {
-  const request = await axios.post(url, data);
-  return request;
-}
+
+// const emailsend = async (url, data) => {
+//   const resp = await axios.post(url, data);
+//   return request;
+// }
 function* sendMessageSaga({payload}) {
  try {
-   console.log('saga paylosd: ', payload);
-  const result = yield call(emailsend(URL,payload));
+  console.log('saga paylosd: ', payload);
+  const result = yield call(api.sendemail(payload));
+  yield console.log('server response', result)
   yield put(submitFormSuccess(result))
  } catch(err) {
    console.log('error in saga sendmessage', err);

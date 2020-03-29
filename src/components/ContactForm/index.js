@@ -61,6 +61,15 @@ const ContactForm = () => {
       />
       <TextField
         variant="outlined"
+        label="What are you intersted in"
+        type="text"
+        value={values.userSubject}
+        onChange={handleInputChange}
+        name="userSubject"
+        placeholder="Upholstery, Awnings, etc"
+      />
+      <TextField
+        variant="outlined"
         label="Enter your email"
         type="email"
         value={values.userEmail}

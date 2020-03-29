@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://web-server.oleg-dev.com:6565/send-email';
+const URL = 'http://localhost:8787/send-email';
 
 export default {
   sendemail: data => {
