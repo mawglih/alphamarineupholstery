@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { submitFormStart } from '../../store/forms/forms.actions';
+import { submitFormStart, clearForm, } from '../../store/forms/forms.actions';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Modal from '../Modal';
 import cn from 'classnames';
 import styles from './ContactForm.css';
 
@@ -19,13 +20,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const ContactForm = () => {
+const ContactForm = ({
+  status,
+}) => {
   const dispatch = useDispatch();
   const actions = useMemo(
 		() =>
 			bindActionCreators(
 				{
           sendmessage: submitFormStart,
+          clear: clearForm,
 				},
 				dispatch,
 			),
@@ -36,6 +40,9 @@ const ContactForm = () => {
     e.preventDefault()
     console.log('data: ', values);
     actions.sendmessage(values);
+    status = true;
+    actions.clear();
+    setValues({ userName: '', userEmail: '', userText: '', userSubject: '', })
   };
   const handleInputChange = e => {
     const { name, value } = e.target;

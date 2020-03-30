@@ -10,3 +10,10 @@
   width: 40vw;
   height: 30vw;
 }
+@media only screen and (max-width: 600px) {
+  .map {
+    margin-top: 20px;
+    width: 90vw;
+    height: 100vw;
+  }
+}

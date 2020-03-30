@@ -29,9 +29,7 @@ const useStyles = makeStyles({
 
 const Header = () => {
   const classes = useStyles();
-  const [state, setState] = useState({
-    left: false,
-  });
+  const [state, setState] = useState(false);
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -85,9 +83,9 @@ const Header = () => {
           centered
         >
           {LINKS.map(({ text, link }) => (
-            <NavLink exact={true} activeClassName={styles.isActive} to={link} key={text}>
+            <NavLink exact activeClassName={styles.isActive} to={link} key={text}>
               <Tab 
-                label={text}
+                label={text} href={link} component={'span'}
               />
             </NavLink>
           ))}

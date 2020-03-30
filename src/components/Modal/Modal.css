@@ -117,8 +117,8 @@
   position: relative;
 }
 .big {
-  width: 65rem;
-  height: 35rem;
+  width: 65vw;
+  height: 50vh;
   background-color: white;
   border-radius: 10px;
   border: 1px #222 solid;
@@ -278,4 +278,11 @@
   background-color: transparent;
   border-radius: 15px;
   text-transform: uppercase;
+}
+/* for smaller devices */
+@media only screen and (max-width: 600px) {
+  .big {
+    width: 96vw;
+    height: 100vh;
+  }
 }
