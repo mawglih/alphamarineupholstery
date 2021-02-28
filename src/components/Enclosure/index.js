@@ -13,14 +13,11 @@ const Enclosure = () => {
   }, []);
   const onImageClick = img => {
     setModalOpen(true);
-    console.log('image: ', img);
     setImagePath(img);
     setText(imageName(img));
   };
   const imageName = img => {
     const lastLetter = img.split('').slice(-1)[0];
-    console.log('last letter', lastLetter);
-
     if( lastLetter=== 'a') return 'before';
     return 'after';
   }
